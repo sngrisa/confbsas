@@ -1,0 +1,13 @@
+textarea{
+    resize: none !important;
+    height: 200px !important;
+}
+
+.h2-form{
+    font-weight: bolder !important;
+}
+
+#btn-green{
+    background-color: rgba(150,201,62,255);
+    color: white;
+}
