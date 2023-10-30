@@ -1,0 +1,58 @@
+p {
+    color: gray;
+    margin-bottom: 12% !important;
+}
+
+.card {
+    border: 2px solid rgba(0, 0, 0, .125) !important;
+}
+
+h5 {
+    font-weight: 600 !important;
+}
+
+.h4,
+h4 {
+    font-size: 1.5rem;
+    margin-top: 12% !important;
+}
+
+.one {
+    border-style: solid !important;
+    border-color: blue !important;
+    margin-right: 1% !important;
+    cursor: pointer !important;
+}
+
+.col-footer {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+.col {
+    margin-left: 1% !important;
+}
+
+.two {
+    border-style: solid !important;
+    border-color: lightblue !important;
+    margin-right: 1% !important;
+    cursor: pointer !important;
+}
+
+.three {
+    border-style: solid !important;
+    border-color: orange !important;
+    cursor: pointer !important;
+}
+
+.btn-form {
+    background-color: #97c93e !important;
+    color: aliceblue !important;
+}

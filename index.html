@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1yTLwNiCZhIdCWolQldwq4spHQkgZDqkG">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <title>Conferencias de Codo a Codo</title>
 </head>
 
@@ -32,38 +32,55 @@
                     <li class="nav-item"><a href="#oradores" class="nav-link">Los oradores</a></li>
                     <li class="nav-item"><a href="#lugardestino" class="nav-link">El lugar y la fecha</a></li>
                     <li class="nav-item"><a href="#orador" class="nav-link">Convertirse en Orador</a></li>
-                    <li class="nav-item"><a href="#tickets" class="nav-link" id="comprarTickets">Comprar Tickets</a>
+                    <li class="nav-item"><a href="./pages/tickets.html" class="nav-link" id="comprarTickets">Comprar
+                            Tickets</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div id="home">
-        <div id="carouselExampleSlidesOnly container" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-sm-100 w-md-100 w-lg-100 img-carrousel" src="./assets/ba1.jpg" alt="First slide">
-                    <div class="carousel-caption">
-                        <h1>Conf Bs As</h1>
-                        <p>Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes
-                            de Codo a Codo y a los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
-                        <div class="button-menu text-end mt-3">
-                            <a class="btn btn-white" href="#orador">Quiero ser orador</a>
-                            <a class="btn btn-success" href="">Comprar tickets</a>
-                        </div>
+    <div class="swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide slide1">
+                <div class="text-carrousel">
+                    <h1 class="title-swipper">Conf Bs As</h1>
+                    <p class="text-swipper">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes
+                        de Codo a Codo y a los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                    <div class="button-menu text-end mt-3">
+                        <a class="btn btn-white" href="#orador">Quiero ser orador</a>
+                        <a class="btn btn-success" href="./pages/tickets.html">Comprar tickets</a>
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 img-carrousel" src="./assets/ba2.jpg
-                " alt="Second slide">
+            </div>
+
+            <div class="swiper-slide slide2">
+                <div class="text-carrousel">
+                    <h1 class="title-swipper">Conf Bs As</h1>
+                    <p class="text-swipper">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes
+                        de Codo a Codo y a los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                    <div class="button-menu text-end mt-3">
+                        <a class="btn btn-white" href="#orador">Quiero ser orador</a>
+                        <a class="btn btn-success" href="./pages/tickets.html">Comprar tickets</a>
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100 img-carrousel" src="./assets/ba3.jpg" alt="Third slide">
+            </div>
+            <div class="swiper-slide slide3">
+                <div class="text-carrousel">
+                    <h1 class="title-swipper">Conf Bs As</h1>
+                    <p class="text-swipper">Bs As llega por primera vez a Argentina. Un evento para compartir con nuestra comunidad el conocimiento y experiencia de los expertos que están creando el futuro de internet. Ven a conocer a miembros del evento, a otros estudiantes
+                        de Codo a Codo y a los oradores de primer nivel que tenemos para ti. Te esperamos!</p>
+                    <div class="button-menu text-end mt-3">
+                        <a class="btn btn-white" href="#orador">Quiero ser orador</a>
+                        <a class="btn btn-success" href="./pages/tickets.html">Comprar tickets</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
     </div>
-
     <div class="container" id="oradores">
         <p class="text-center mt-3">CONOCE A LOS</p>
         <h2 class="text-center">ORADORES</h2>
@@ -163,32 +180,34 @@
     <footer class="container-fluid">
         <div class="footer-container row mt-2">
             <div class="col">
-                <a href="" id="a-footer">Proyectos <br> Recientes</a>
+                <a href="https://github.com/topics/codoacodo" id="a-footer">Proyectos <br> Recientes</a>
             </div>
             <div class="col">
-                <a href="" id="a-footer">Contáctanos</a>
+                <a href="https://buenosaires.gob.ar/educacion/codoacodo/formulario-de-contacto" id="a-footer">Contáctanos</a>
             </div>
             <div class="col">
-                <a href="" id="a-footer">Prensa</a>
+                <a href="https://noticias.bahia.gob.ar/2021/07/02/taller-virtual-codo-a-codo-4-0/" id="a-footer">Prensa</a>
             </div>
             <div class="col">
-                <a href="" id="a-footer">Conferencias</a>
+                <a href="./index.html" id="a-footer">Conferencias</a>
             </div>
             <div class="col">
-                <a href="" id="a-footer">Términos y <br> Condiciones</a>
+                <a href="https://buenosaires.gob.ar/terminos-y-condiciones" id="a-footer">Términos y <br>
+                    Condiciones</a>
             </div>
             <div class="col">
-                <a href="" id="a-footer">Privacidad</a>
+                <a href="https://buenosaires.gob.ar/privacidad" id="a-footer">Privacidad</a>
             </div>
             <div class="col">
-                <a href="" id="a-footer">Estudiantes</a>
+                <a href="https://aulasvirtuales.bue.edu.ar" id="a-footer">Estudiantes</a>
             </div>
         </div>
     </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
 </body>
 
 </html>

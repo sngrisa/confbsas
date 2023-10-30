@@ -1,11 +1,9 @@
-.footer-container{
-    background-color: rgba(30,81,112,255) !important;
+.footer-container {
+    background-color: rgba(30, 81, 112, 255) !important;
     opacity: 1;
     padding-top: 4%;
     padding-bottom: 4%;
 }
-
-
 
 #a-footer {
     color: whitesmoke !important;

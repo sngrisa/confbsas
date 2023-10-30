@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/jpg" href="./assets/codoacodo.png" />
+    <link rel="stylesheet" href="./../css/card-category.css">
+    <link rel="stylesheet" href="./../css/footer.css">
+    <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Conferencias de Codo a Codo</title>
+</head>
+
+<body onload="getNumbers()">
+    <nav class="navbar navbar-expand-lg py-3 navbar-dark bg-dark shadow-sm text-white">
+        <div class="container">
+            <a href="./../index.html" class="navbar-brand">
+                <img src="./../assets/codoacodo.png" width="70" alt="logo" class="d-inline-block align-middle mr-2">
+                <span>Conf Bs As</span>
+            </a>
+            <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="./../index.html#home" class="nav-link">La conferencia</a></li>
+                    <li class="nav-item"><a href="./../index.html#oradores" class="nav-link">Los oradores</a></li>
+                    <li class="nav-item"><a href="./../index.html#lugardestino" class="nav-link">El lugar y la fecha</a></li>
+                    <li class="nav-item"><a href="./../index.html#orador" class="nav-link">Convertirse en Orador</a></li>
+                    <li class="nav-item"><a href="./../index.html#tickets" class="nav-link" id="comprarTickets">Comprar Tickets</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row mt-3 mb-3">
+            <div class="col card one">
+                <h4 class="text-center">Estudiante</h4>
+                <h6 class="text-center">Tienen un Descuento</h6>
+                <h5 class="text-center">80%</h5>
+                <p class="text-center">* Presentar documentación</p>
+            </div>
+            <div class="col card two">
+                <h4 class="text-center">Trainee</h4>
+                <h6 class="text-center">Tienen un Descuento</h6>
+                <h5 class="text-center">50%</h5>
+                <p class="text-center">* Presentar documentación</p>
+            </div>
+            <div class="col card three">
+                <h4 class="text-center">Junior</h4>
+                <h6 class="text-center">Tienen un Descuento</h6>
+                <h5 class="text-center">15%</h5>
+                <p class="text-center">* Presentar documentación</p>
+            </div>
+        </div>
+        <form id="myform">
+            <h6 class="text-center">VENTA</h6>
+            <h2 class="text-center">VALOR DEL TICKET
+                <small id="precioTicket"></small>
+            </h2>
+            <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" name="nombre" id="nombre" required placeholder="Nombre">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" name="apellido" id="apellido" required placeholder="Apellido">
+                </div>
+                <div class="col-12">
+                    <input type="email" class="form-control mt-3 ml-2" name="email" id="email" required placeholder="Email">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <label for="quanty">Cantidad</label>
+                    <input type="number" id="quanty" placeholder="Cantidad" required name="quanty" class="form-control" onchange="getDiscount()" min="1" />
+                </div>
+                <div class="col">
+                    <label for="category">Categoria</label>
+                    <select id="category" name="category" class="form-control" onchange="getDiscount()">
+                        <option value="Estudiante">Estudiante</option>
+                        <option value="Trainee">Trainee</option>
+                        <option value="Junior">Junior</option>
+                    </select>
+                </div>
+            </div>
+            <div class="alert alert-primary mt-3 mb-3">
+                <h5>Total a Pagar:<small id="priceBoleta">0</small></h5>
+            </div>
+            <div class="row mt-5 mb-3">
+                <div class="col">
+                    <button class="btn btn-block btn-form" onclick="cleanForm()">Borrar</button>
+                </div>
+                <div class="col ">
+                    <button class="btn btn-block btn-form" onclick="getResume()">Resumen</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer class="container-fluid">
+        <div class="footer-container row mt-2">
+            <div class="col">
+                <a href="https://github.com/topics/codoacodo" id="a-footer">Proyectos <br> Recientes</a>
+            </div>
+            <div class="col">
+                <a href="https://buenosaires.gob.ar/educacion/codoacodo/formulario-de-contacto" id="a-footer">Contáctanos</a>
+            </div>
+            <div class="col">
+                <a href="https://noticias.bahia.gob.ar/2021/07/02/taller-virtual-codo-a-codo-4-0/" id="a-footer">Prensa</a>
+            </div>
+            <div class="col">
+                <a href="./../index.html" id="a-footer">Conferencias</a>
+            </div>
+            <div class="col">
+                <a href="https://buenosaires.gob.ar/terminos-y-condiciones" id="a-footer">Términos y <br> Condiciones</a>
+            </div>
+            <div class="col">
+                <a href="https://buenosaires.gob.ar/privacidad" id="a-footer">Privacidad</a>
+            </div>
+            <div class="col">
+                <a href="https://aulasvirtuales.bue.edu.ar" id="a-footer">Estudiantes</a>
+            </div>
+        </div>
+    </footer>
+    <script src="./../js/tickets.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js " integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN " crossorigin="anonymous "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js " integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+ " crossorigin="anonymous "></script>
+</body>
+
+</html>
